@@ -120,3 +120,165 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* Spotlight effect */
+.spotlight {
+  position: relative;
+}
+.spotlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(204, 160, 84, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Badge */
+.badge-broadway {
+  background: linear-gradient(135deg, #CCA054, #8B6914);
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin: 0.125rem;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(5px);
+}
+
+/* Golden overlay for img-gold-filter */
+.img-gold-filter {
+  position: relative;
+}
+.img-gold-filter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(204, 160, 84, 0.15);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+.img-gold-filter:hover::after {
+  opacity: 0;
+}
+
+/* Swiper custom styles */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev {
+  color: #CCA054 !important;
+  background: none !important;
+  background-color: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #E8C882 !important;
+  background: none !important;
+}
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 44px !important;
+  font-weight: bold !important;
+  background: none !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+/* Swiper pagination below slides */
+.swiper {
+  padding-bottom: 40px !important;
+}
+.swiper-pagination {
+  bottom: 0 !important;
+  position: absolute !important;
+}
+.swiper-pagination-bullet {
+  background: #CCA054 !important;
+  opacity: 0.5 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #E8C882 !important;
+  opacity: 1 !important;
+}
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+/* Prose styling for markdown content */
+.prose-broadway {
+  color: rgba(250, 249, 246, 0.8);
+}
+.prose-broadway strong {
+  color: #FAF9F6;
+}
+.prose-broadway a {
+  color: #CCA054;
+}
+.prose-broadway a:hover {
+  color: #E8C882;
+}
+
+/* Global link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([class]) {
+  color: #CCA054;
+}
+a:not([class]):hover {
+  color: #E8C882;
+}
+
+/* Override any Tailwind blue defaults */
+::selection {
+  background: #CCA054;
+  color: #0a0a0a;
+}
+::-moz-selection {
+  background: #CCA054;
+  color: #0a0a0a;
+}

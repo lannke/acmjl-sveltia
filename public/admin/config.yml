@@ -3,6 +3,8 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
+local_backend: true
+
 media_folder: public/images
 public_folder: /images
 
@@ -24,14 +26,14 @@ collections:
             label: Image Hero
             widget: image
           - name: video
-            label: Video YouTube (embed)
+            label: Video embed
             widget: text
             required: false
           - name: quote
             label: Citation
             widget: string
           - name: body
-            label: Texte présentation
+            label: Texte presentation
             widget: markdown
           - name: body_bio
             label: Bio Jenny Lorant
@@ -39,6 +41,16 @@ collections:
           - name: image_bio
             label: Photo Jenny
             widget: image
+          - name: gallery
+            label: Galerie photos
+            widget: list
+            field:
+              name: image
+              label: Image
+              widget: image
+          - name: eleves_headline
+            label: Titre section eleves
+            widget: string
 
   - name: ateliers
     label: Ateliers
@@ -49,36 +61,63 @@ collections:
       - name: title
         label: Titre
         widget: string
-      - name: headline
-        label: Sous-titre
+      - name: badge
+        label: Badge
         widget: string
-      - name: numero
-        label: Numéro ordre
-        widget: number
+        required: false
       - name: prix
-        label: Prix (CHF)
-        widget: number
-      - name: category
-        label: Catégories
-        widget: text
-      - name: frequence
-        label: Fréquence
+        label: Prix
         widget: string
-      - name: periode
-        label: Période
-        widget: string
-      - name: horaire
+      - name: horaires
         label: Horaires
         widget: string
-      - name: lieu_detail
+      - name: periode
+        label: Periode
+        widget: string
+      - name: lieu
         label: Lieu
         widget: string
-      - name: date_spectacle
-        label: Date spectacle
+      - name: contenu
+        label: Contenu
+        widget: list
+        field:
+          name: item
+          label: Item
+          widget: string
+      - name: spectacle
+        label: Spectacle
         widget: string
+        required: false
+      - name: inclus
+        label: Inclus
+        widget: list
+        field:
+          name: item
+          label: Item
+          widget: string
+        required: false
+      - name: conditions
+        label: Conditions
+        widget: list
+        field:
+          name: item
+          label: Item
+          widget: string
+        required: false
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - label: Ouvert
+            value: open
+          - label: Complet
+            value: complet
+          - label: Ferme
+            value: closed
       - name: body
         label: Description
         widget: markdown
+        required: false
 
   - name: professeurs
     label: Professeurs
@@ -89,18 +128,19 @@ collections:
       - name: title
         label: Nom
         widget: string
-      - name: headline
-        label: Spécialité
+      - name: fonction
+        label: Fonction
         widget: string
       - name: image
         label: Photo
         widget: image
+        required: false
       - name: body
         label: Biographie
         widget: markdown
 
   - name: eleves
-    label: Anciens élèves
+    label: Anciens eleves
     folder: content/eleves
     create: true
     slug: "{{slug}}"
@@ -111,8 +151,8 @@ collections:
       - name: image
         label: Photo
         widget: image
-      - name: website
-        label: Site web
+      - name: credit
+        label: Credit photo
         widget: string
         required: false
       - name: body
@@ -128,25 +168,36 @@ collections:
       - name: title
         label: Titre
         widget: string
+      - name: groupe
+        label: Groupe
+        widget: string
+      - name: dates
+        label: Dates
+        widget: list
+        field:
+          name: date
+          label: Date
+          widget: string
       - name: image
         label: Affiche
         widget: image
-      - name: date
-        label: Date
-        widget: datetime
-      - name: heure
-        label: Heure
-        widget: string
-      - name: lieu
-        label: Lieu
-        widget: string
-      - name: reservation_url
-        label: URL réservation
+        required: false
+      - name: reservations
+        label: Email reservations
         widget: string
         required: false
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - label: A venir
+            value: a_venir
+          - label: Passe
+            value: passe
       - name: body
         label: Description
         widget: markdown
+        required: false
 
   - name: lieux
     label: Lieux

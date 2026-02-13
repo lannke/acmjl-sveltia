@@ -4,6 +4,16 @@ import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+export interface Stats {
+  eleves: string;
+  eleves_desc: string;
+  region: string;
+  region_desc: string;
+  experience: string;
+  experience_desc: string;
+  unique: string;
+}
+
 export interface HomeContent {
   title: string;
   headline: string;
@@ -13,12 +23,15 @@ export interface HomeContent {
   body: string;
   body_bio: string;
   image_bio: string;
+  gallery: string[];
+  eleves_headline: string;
+  stats?: Stats;
 }
 
 export interface Professeur {
   slug: string;
   title: string;
-  headline: string;
+  fonction: string;
   image: string;
   body: string;
 }
@@ -26,17 +39,48 @@ export interface Professeur {
 export interface Atelier {
   slug: string;
   title: string;
-  headline: string;
-  numero: number;
-  prix: number;
-  category: string;
-  frequence: string;
+  badge?: string;
+  prix: string;
+  horaires: string;
   periode: string;
-  horaire: string;
   lieu: string;
-  lieu_detail: string;
-  date_spectacle: string;
+  contenu: string[];
+  spectacle?: string;
+  inclus?: string[];
+  conditions?: string[];
+  status: 'open' | 'complet' | 'closed';
   body: string;
+}
+
+export interface Event {
+  slug: string;
+  title: string;
+  groupe: string;
+  dates: string[];
+  image?: string;
+  tarifs?: {
+    avs?: string;
+    enfants_plus_6?: string;
+    enfants_moins_6?: string;
+    adultes?: string;
+  };
+  reservations?: string;
+  status: 'a_venir' | 'passe';
+  body: string;
+}
+
+export interface Eleve {
+  slug: string;
+  title: string;
+  image: string;
+  credit?: string;
+  body: string;
+}
+
+export interface Lieu {
+  slug: string;
+  title: string;
+  adresse: string;
 }
 
 export async function getHomeContent(): Promise<HomeContent> {
@@ -51,6 +95,8 @@ export async function getHomeContent(): Promise<HomeContent> {
       body: '',
       body_bio: '',
       image_bio: '/images/jenny.jpg',
+      gallery: [],
+      eleves_headline: 'Ils sont passés par l\'ACMJL',
     };
   }
 
@@ -66,6 +112,9 @@ export async function getHomeContent(): Promise<HomeContent> {
     body: content,
     body_bio: data.body_bio || '',
     image_bio: data.image_bio || '/images/jenny.jpg',
+    gallery: data.gallery || [],
+    eleves_headline: data.eleves_headline || 'Ils sont passés par l\'ACMJL',
+    stats: data.stats,
   };
 }
 
@@ -88,8 +137,8 @@ export async function getProfesseurs(): Promise<Professeur[]> {
       return {
         slug: filename.replace(/\.md$/, ''),
         title: data.title || '',
-        headline: data.headline || '',
-        image: data.image || '/images/placeholder.jpg',
+        fonction: data.fonction || '',
+        image: data.image || '',
         body: content,
       };
     });
@@ -116,20 +165,108 @@ export async function getAteliers(): Promise<Atelier[]> {
       return {
         slug: filename.replace(/\.md$/, ''),
         title: data.title || '',
-        headline: data.headline || '',
-        numero: data.numero || 0,
-        prix: data.prix || 0,
-        category: data.category || '',
-        frequence: data.frequence || '',
+        badge: data.badge,
+        prix: data.prix || '',
+        horaires: data.horaires || '',
         periode: data.periode || '',
-        horaire: data.horaire || '',
         lieu: data.lieu || '',
-        lieu_detail: data.lieu_detail || '',
-        date_spectacle: data.date_spectacle || '',
+        contenu: data.contenu || [],
+        spectacle: data.spectacle,
+        inclus: data.inclus,
+        conditions: data.conditions,
+        status: data.status || 'open',
         body: content,
       };
-    })
-    .sort((a, b) => a.numero - b.numero);
+    });
 
   return ateliers;
+}
+
+export async function getEvents(): Promise<{ future: Event[]; past: Event[] }> {
+  const eventsDirectory = path.join(contentDirectory, 'events');
+
+  if (!fs.existsSync(eventsDirectory)) {
+    return { future: [], past: [] };
+  }
+
+  const filenames = fs.readdirSync(eventsDirectory);
+
+  const events = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .map(filename => {
+      const filePath = path.join(eventsDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
+
+      return {
+        slug: filename.replace(/\.md$/, ''),
+        title: data.title || '',
+        groupe: data.groupe || '',
+        dates: data.dates || [],
+        image: data.image,
+        tarifs: data.tarifs,
+        reservations: data.reservations,
+        status: data.status || 'passe',
+        body: content,
+      };
+    });
+
+  const future = events.filter(e => e.status === 'a_venir');
+  const past = events.filter(e => e.status === 'passe');
+
+  return { future, past };
+}
+
+export async function getEleves(): Promise<Eleve[]> {
+  const elevesDirectory = path.join(contentDirectory, 'eleves');
+
+  if (!fs.existsSync(elevesDirectory)) {
+    return [];
+  }
+
+  const filenames = fs.readdirSync(elevesDirectory);
+
+  const eleves = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .map(filename => {
+      const filePath = path.join(elevesDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
+
+      return {
+        slug: filename.replace(/\.md$/, ''),
+        title: data.title || '',
+        image: data.image || '',
+        credit: data.credit,
+        body: content,
+      };
+    });
+
+  return eleves;
+}
+
+export async function getLieux(): Promise<Lieu[]> {
+  const lieuxDirectory = path.join(contentDirectory, 'lieux');
+
+  if (!fs.existsSync(lieuxDirectory)) {
+    return [];
+  }
+
+  const filenames = fs.readdirSync(lieuxDirectory);
+
+  const lieux = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .map(filename => {
+      const filePath = path.join(lieuxDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data } = matter(fileContents);
+
+      return {
+        slug: filename.replace(/\.md$/, ''),
+        title: data.title || '',
+        adresse: data.adresse || '',
+      };
+    });
+
+  return lieux;
 }
