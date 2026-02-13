@@ -3,6 +3,8 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
+locale: fr
+
 media_folder: public/images
 public_folder: /images
 
