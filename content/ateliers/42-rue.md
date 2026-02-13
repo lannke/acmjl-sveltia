@@ -8,9 +8,9 @@ lieu: lausanne
 contenu:
   - Danse
   - Théâtre
-  - Musique
   - Claquettes
   - Impro
+  - Musique
 spectacle: 9 et 10 mai 2026
 inclus:
   - L'Acmjl Orchestra dirigé par Julien Fontaine, accompagnera le spectacle
