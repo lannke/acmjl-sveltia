@@ -1,0 +1,162 @@
+backend:
+  name: github
+  repo: lannke/acmjl-sveltia
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Accueil
+        file: content/pages/home.md
+        fields:
+          - name: title
+            label: Titre
+            widget: string
+          - name: headline
+            label: Accroche
+            widget: string
+          - name: hero_image
+            label: Image Hero
+            widget: image
+          - name: video
+            label: Video YouTube (embed)
+            widget: text
+            required: false
+          - name: quote
+            label: Citation
+            widget: string
+          - name: body
+            label: Texte présentation
+            widget: markdown
+          - name: body_bio
+            label: Bio Jenny Lorant
+            widget: markdown
+          - name: image_bio
+            label: Photo Jenny
+            widget: image
+
+  - name: ateliers
+    label: Ateliers
+    folder: content/ateliers
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Titre
+        widget: string
+      - name: headline
+        label: Sous-titre
+        widget: string
+      - name: numero
+        label: Numéro ordre
+        widget: number
+      - name: prix
+        label: Prix (CHF)
+        widget: number
+      - name: category
+        label: Catégories
+        widget: text
+      - name: frequence
+        label: Fréquence
+        widget: string
+      - name: periode
+        label: Période
+        widget: string
+      - name: horaire
+        label: Horaires
+        widget: string
+      - name: lieu_detail
+        label: Lieu
+        widget: string
+      - name: date_spectacle
+        label: Date spectacle
+        widget: string
+      - name: body
+        label: Description
+        widget: markdown
+
+  - name: professeurs
+    label: Professeurs
+    folder: content/professeurs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Nom
+        widget: string
+      - name: headline
+        label: Spécialité
+        widget: string
+      - name: image
+        label: Photo
+        widget: image
+      - name: body
+        label: Biographie
+        widget: markdown
+
+  - name: eleves
+    label: Anciens élèves
+    folder: content/eleves
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Nom
+        widget: string
+      - name: image
+        label: Photo
+        widget: image
+      - name: website
+        label: Site web
+        widget: string
+        required: false
+      - name: body
+        label: Biographie
+        widget: markdown
+
+  - name: events
+    label: Spectacles
+    folder: content/events
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Titre
+        widget: string
+      - name: image
+        label: Affiche
+        widget: image
+      - name: date
+        label: Date
+        widget: datetime
+      - name: heure
+        label: Heure
+        widget: string
+      - name: lieu
+        label: Lieu
+        widget: string
+      - name: reservation_url
+        label: URL réservation
+        widget: string
+        required: false
+      - name: body
+        label: Description
+        widget: markdown
+
+  - name: lieux
+    label: Lieux
+    folder: content/lieux
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Nom
+        widget: string
+      - name: adresse
+        label: Adresse
+        widget: text
