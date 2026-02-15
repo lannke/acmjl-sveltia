@@ -28,7 +28,8 @@ collections:
             widget: string
           - name: image_hero
             label: Image de fond
-            widget: cloudinary
+            widget: string
+            hint: "Collez l'URL Cloudinary (uploadez sur /upload ou cloudinary.com)"
 
       - name: stats
         label: "2. Stats"
@@ -113,12 +114,13 @@ collections:
             label: Titre de la section
             widget: string
           - name: images
-            label: Photos
+            label: Photos (URLs Cloudinary)
             widget: list
+            hint: "Uploadez sur /upload puis collez les URLs"
             field:
               name: image
-              label: Image
-              widget: cloudinary
+              label: URL Image
+              widget: string
 
       - name: ateliers_section
         label: "7. Ateliers"
@@ -195,7 +197,8 @@ collections:
             widget: string
           - name: image
             label: Photo
-            widget: cloudinary
+            widget: string
+            hint: "Collez l'URL Cloudinary (uploadez sur /upload ou cloudinary.com)"
           - name: body
             label: Biographie
             widget: markdown
@@ -314,9 +317,10 @@ collections:
         label: Fonction
         widget: string
       - name: image
-        label: Photo
-        widget: cloudinary
+        label: Photo (URL Cloudinary)
+        widget: string
         required: false
+        hint: "Uploadez sur /upload puis collez l'URL"
       - name: body
         label: Biographie
         widget: markdown
@@ -331,8 +335,9 @@ collections:
         label: Nom
         widget: string
       - name: image
-        label: Photo
-        widget: cloudinary
+        label: Photo (URL Cloudinary)
+        widget: string
+        hint: "Uploadez sur /upload puis collez l'URL"
       - name: credit
         label: Crédit photo
         widget: string
@@ -361,9 +366,10 @@ collections:
           label: Date
           widget: string
       - name: image
-        label: Affiche
-        widget: cloudinary
+        label: Affiche (URL Cloudinary)
+        widget: string
         required: false
+        hint: "Uploadez sur /upload puis collez l'URL"
       - name: reservations
         label: Email réservations
         widget: string
