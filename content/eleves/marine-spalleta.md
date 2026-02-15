@@ -1,6 +1,6 @@
 ---
 title: Marine Spalleta
-image: /uploads/1302-marine_spalleti.jpg
+image: public/uploads/1302-marine_spalleti.jpg
 credit: ""
 ---
 

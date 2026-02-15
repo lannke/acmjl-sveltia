@@ -4,6 +4,6 @@ groupe: Compagnie
 dates:
   - "2025-09-27"
   - "2025-09-28"
-image: /uploads/1284-2_cest_assez_-_80_cest_trop.png
+image: public/uploads/1284-2_cest_assez_-_80_cest_trop.png
 status: passe
 ---

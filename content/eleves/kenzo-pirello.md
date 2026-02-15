@@ -1,6 +1,6 @@
 ---
 title: Kenzo Pirello
-image: /uploads/1305-whatsapp_image_2025-02-25_at_13_00_24.jpg
+image: public/uploads/1305-whatsapp_image_2025-02-25_at_13_00_24.jpg
 credit: ""
 ---
 

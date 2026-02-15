@@ -9,7 +9,7 @@ tarifs:
   enfants_plus_6: CHF 20
   enfants_moins_6: gratuit
   adultes: CHF 30
-image: /uploads/1290-1.png
+image: public/uploads/1290-1.png
 reservations: contact@acmjl.ch
 status: a_venir
 ---

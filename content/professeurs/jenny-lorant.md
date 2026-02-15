@@ -1,7 +1,7 @@
 ---
 title: Jenny Lorant
 fonction: Directrice et fondatrice de l'ACMJL
-image: /uploads/1-img_7631.jpg
+image: public/uploads/1-img_7631.jpg
 ---
 
 Comédienne, auteur-compositeur, interprète mais aussi librettiste et coach vocale, Jenny Lorant a plusieurs cordes à son arc et est depuis 2017, directrice et fondatrice de l'ACMJL.

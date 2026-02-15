@@ -1,7 +1,7 @@
 ---
 title: Kim Selamet
 fonction: Professeure de danse des groupes Boulevard et Tamalou
-image: /uploads/1189-kim-selamet.png
+image: public/uploads/1189-kim-selamet.png
 ---
 
 Kim Selamet se forme en claquettes auprès de Fabrice Martin. Elle intègre aussi le programme pré-professionnel (danse classique et contemporaine) de l'Académie de danse Igokat. Elle obtient le titre de championne du monde de claquettes solo élite en 2015 et part se perfectionner en danse contemporaine, hip-hop et claquettes auprès de professeurs renommés aux USA tels que Dionna Pridgeon, Diego Funes et Derick K. Grant, où elle sera diplômée de l'International Independent Study Program (Steps on Broadway), à New York.

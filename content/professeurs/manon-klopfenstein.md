@@ -1,7 +1,7 @@
 ---
 title: Manon Klopfenstein
 fonction: Professeure de danse et de claquettes des groupes juniors 1 et 2
-image: /uploads/1316-whatsapp_image_2025-08-18_at_10_57_12.jpg
+image: public/uploads/1316-whatsapp_image_2025-08-18_at_10_57_12.jpg
 ---
 
 Depuis son plus jeune âge, Manon évolue dans un univers artistique riche et varié, d'abord à travers la musique, puis en découvrant la danse, qui deviendra sa véritable passion. Animée par le désir de faire de cet art son métier, elle a choisi de se consacrer pleinement à la danse.

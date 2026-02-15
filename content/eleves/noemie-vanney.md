@@ -1,6 +1,6 @@
 ---
 title: Noémie Vanney
-image: /uploads/1303-noemie_vanney.jpg
+image: public/uploads/1303-noemie_vanney.jpg
 credit: ""
 ---
 

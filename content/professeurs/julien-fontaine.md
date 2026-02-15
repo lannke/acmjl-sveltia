@@ -1,7 +1,7 @@
 ---
 title: Julien Fontaine
 fonction: Directeur musical du groupe ACMJL Orchestra
-image: /uploads/1288-275372850_503513167832227_5624123978496565332_n.jpg
+image: public/uploads/1288-275372850_503513167832227_5624123978496565332_n.jpg
 ---
 
 Pianiste, arrangeur et pédagogue, Julien Fontaine intègre l'EJMA en 2005 et forge son expérience sur scène avec divers groupes de reprises aux styles musicaux très variés.

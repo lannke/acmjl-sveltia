@@ -1,6 +1,6 @@
 ---
 title: Izia Jeen
-image: /uploads/1304-img_0589.jpg
+image: public/uploads/1304-img_0589.jpg
 credit: ""
 ---
 

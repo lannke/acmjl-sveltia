@@ -3,9 +3,9 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
-# Images stockées dans Git (simple: Upload → choisir fichier → terminé)
+# Images stockées dans Git
 media_folder: "public/uploads"
-public_folder: "/uploads"
+public_folder: "public/uploads"
 
 collections:
   - name: sections

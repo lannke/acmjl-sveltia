@@ -1,6 +1,6 @@
 ---
 title: Melina Soria
-image: /uploads/1299-melina_soria.jpg
+image: public/uploads/1299-melina_soria.jpg
 credit: fabxplore
 ---
 

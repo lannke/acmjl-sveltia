@@ -1,6 +1,6 @@
 ---
 title: Samuel Ortega
-image: /uploads/1301-samuel_ortega.jpg
+image: public/uploads/1301-samuel_ortega.jpg
 credit: ""
 ---
 

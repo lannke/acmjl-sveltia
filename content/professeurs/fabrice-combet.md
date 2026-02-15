@@ -1,7 +1,7 @@
 ---
 title: Fabrice Combet
 fonction: Professeur de théâtre des groupes Boulevard et 42 rue
-image: /uploads/1184-fabrice.jpg
+image: public/uploads/1184-fabrice.jpg
 ---
 
 Fabrice Combet est né en 1982 à Annecy en France. Dès son adolescence il s'intéresse de près au théâtre où il intègre la compagnie Prose et Impro. Il interprète différents rôles comme La Valse des Toréadors de Jean Anouilh, Le Mari, la Femme et l'Amant de Sacha Guitry.
