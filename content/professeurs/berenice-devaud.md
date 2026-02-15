@@ -1,7 +1,7 @@
 ---
 title: Bérénice Devaud
 fonction: Professeure de théâtre du groupe des minis (4-7 ans)
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164293/acmjl/1181/screenshot_2019-10-02_at_18_29_52.png
+image: /uploads/1181-screenshot_2019-10-02_at_18_29_52.png
 ---
 
 Passionnée des arts de la scène, Bérénice est actuellement en formation théâtrale au conservatoire de fribourg. En parallèle, elle participe aux ACMJL jeunes talents depuis 2018. Elle prend des cours privés de chant et de piano.

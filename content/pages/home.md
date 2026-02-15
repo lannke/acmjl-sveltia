@@ -1,7 +1,7 @@
 ---
 title: ACMJL
 headline: Les Ateliers de Comédie Musicale de Jenny Lorant
-hero_image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164268/acmjl/1/home-acmjl-1.jpg
+hero_image: /uploads/1-home-acmjl-1.jpg
 video: '<div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 600px; margin: 0 auto;"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C_NKs2AuNka/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote><script async src="//www.instagram.com/embed.js"></script></div>'
 quote: La vie est une aventure, ose-la.
 body_bio: |
@@ -12,39 +12,39 @@ body_bio: |
   Elle s'essaie aussi au cinéma dans divers courts-métrages tel que Le nouveau variant, CDD diffusée sur LaTélé ainsi qu'à la publicité notamment pour Fooby ou les bougies Alkantara. Enfin, depuis quatre ans, Jenny Lorant étend son champ des possibles et touche à l'humour en collaborant sur diverses revues et projets avec d'autres humoristes tel que Yann Lambiel, Marc Donney-Monnet, Karim Slama, Nathalie Devantay, Cuche et Barbezat, Jessie Kobel, MC Roger et Pierre Aucaigne.
 
   De plus, elle était à la tête d'une chronique de chansons parodiées dans l'émission hebdomadaire La douche du dimanche sur LaTélé. Jenny Lorant travaille actuellement sur un solo en scène et un nouvel EP. De plus, vous la découvrirez prochainement à l'affiche de l'Opéra Rock original Technopolis.
-image_bio: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164269/acmjl/1/img_7631.jpg
+image_bio: /uploads/1-img_7631.jpg
 eleves_headline: Ils sont passés par l'ACMJL
 gallery:
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164214/acmjl/1/2.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164227/acmjl/1/3.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164248/acmjl/1/4.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164253/acmjl/1/5.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164254/acmjl/1/6.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164260/acmjl/1/7.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164262/acmjl/1/8.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164263/acmjl/1/9.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164204/acmjl/1/10.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164205/acmjl/1/11.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164206/acmjl/1/12.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164206/acmjl/1/13.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164207/acmjl/1/14.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164208/acmjl/1/15.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164209/acmjl/1/16.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164210/acmjl/1/17.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164211/acmjl/1/18.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164212/acmjl/1/19.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164214/acmjl/1/20.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164215/acmjl/1/21.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164216/acmjl/1/23.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164218/acmjl/1/24.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164219/acmjl/1/25.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164220/acmjl/1/26.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164221/acmjl/1/27.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164222/acmjl/1/28.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164223/acmjl/1/29.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164228/acmjl/1/32.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164244/acmjl/1/33.jpg
-  - https://res.cloudinary.com/dfv2us40f/image/upload/v1771164246/acmjl/1/35.jpg
+  - /uploads/1-2.jpg
+  - /uploads/1-3.jpg
+  - /uploads/1-4.jpg
+  - /uploads/1-5.jpg
+  - /uploads/1-6.jpg
+  - /uploads/1-7.jpg
+  - /uploads/1-8.jpg
+  - /uploads/1-9.jpg
+  - /uploads/1-10.jpg
+  - /uploads/1-11.jpg
+  - /uploads/1-12.jpg
+  - /uploads/1-13.jpg
+  - /uploads/1-14.jpg
+  - /uploads/1-15.jpg
+  - /uploads/1-16.jpg
+  - /uploads/1-17.jpg
+  - /uploads/1-18.jpg
+  - /uploads/1-19.jpg
+  - /uploads/1-20.jpg
+  - /uploads/1-21.jpg
+  - /uploads/1-23.jpg
+  - /uploads/1-24.jpg
+  - /uploads/1-25.jpg
+  - /uploads/1-26.jpg
+  - /uploads/1-27.jpg
+  - /uploads/1-28.jpg
+  - /uploads/1-29.jpg
+  - /uploads/1-32.jpg
+  - /uploads/1-33.jpg
+  - /uploads/1-35.jpg
 stats:
   eleves: "+150 élèves conquis"
   eleves_desc: Depuis 2016, nos ateliers ont accompagnés 150 élèves.

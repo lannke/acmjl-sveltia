@@ -1,6 +1,6 @@
 ---
 title: Noémie Vanney
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164356/acmjl/1303/noemie_vanney.jpg
+image: /uploads/1303-noemie_vanney.jpg
 credit: ""
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Eva Aran
 fonction: Professeure de chant des Juniors 1 et 2
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164361/acmjl/1318/whatsapp_image_2025-08-27_at_14_02_38.jpg
+image: /uploads/1318-whatsapp_image_2025-08-27_at_14_02_38.jpg
 ---
 
 Passionnée depuis son plus jeune âge par la musique, Eva à chanté dans différents choeurs et a également fait partie de Quarte Blanche, une formation de onze chanteurs proposant un répertoire choral varié. Eva joue de divers instruments comme le violon, le piano et les ukulélé, qu'elle a appris lors de cours ou en autodidacte.

@@ -1,6 +1,6 @@
 ---
 title: Anna Bossi (Marra Bossi)
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164353/acmjl/1300/marra_bossi.jpg
+image: /uploads/1300-marra_bossi.jpg
 credit: ""
 ---
 

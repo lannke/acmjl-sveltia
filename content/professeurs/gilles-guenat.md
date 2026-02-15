@@ -1,7 +1,7 @@
 ---
 title: Gilles Guenat
 fonction: Professeur de danse et de claquettes du groupe Boulevard
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164361/acmjl/1317/gilles-guenat.jpg
+image: /uploads/1317-gilles-guenat.jpg
 ---
 
 Gilles est un passionné de la scène depuis son plus jeune âge. Il a débuté les claquettes et suivi une formation en théâtre et comédie musicale à Lausanne depuis l'âge de huit ans. Il s'est perfectionné en claquettes et en diverses danses avec, entre autres, Fabrice Martin, Barbara Duffy, Derick K. Grant, Jason Janas, Lane Alexander, Cosimo Sabatella, Charly Moser, Michel Koenig, Alain Lopez, Aniurka Balanzo, Carmen Aguiar et Javier Castello.

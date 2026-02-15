@@ -1,6 +1,6 @@
 ---
 title: Samuel Ortega
-image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164354/acmjl/1301/samuel_ortega.jpg
+image: /uploads/1301-samuel_ortega.jpg
 credit: ""
 ---
 
