@@ -258,7 +258,11 @@ collections:
         widget: string
       - name: lieu
         label: Lieu
-        widget: string
+        widget: relation
+        collection: lieux
+        search_fields: [title]
+        value_field: title
+        display_fields: [title]
       - name: contenu
         label: Contenu
         widget: list
