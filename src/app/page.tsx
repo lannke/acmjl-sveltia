@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Video from "@/components/Video";
 import Presentation from "@/components/Presentation";
+import Quote from "@/components/Quote";
 import Gallery from "@/components/Gallery";
 import Ateliers from "@/components/Ateliers";
 import Eleves from "@/components/Eleves";
@@ -13,7 +14,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import {
-  getHomeContent,
+  getSections,
   getProfesseurs,
   getAteliers,
   getEvents,
@@ -22,7 +23,7 @@ import {
 } from "@/lib/content";
 
 export default async function Home() {
-  const home = await getHomeContent();
+  const sections = await getSections();
   const professeurs = await getProfesseurs();
   const ateliers = await getAteliers();
   const events = await getEvents();
@@ -32,23 +33,40 @@ export default async function Home() {
   return (
     <>
       <Navigation />
-      <Hero headline={home.headline} heroImage={home.hero_image} />
+      <Hero
+        headline={sections.accueil.accroche}
+        heroImage={sections.accueil.image_hero}
+      />
       <BackToTop />
-      <Stats />
-      <Video video={home.video} />
-      <Presentation body={home.body} quote={home.quote} />
-      <Gallery images={home.gallery} />
-      <Ateliers ateliers={ateliers} lieux={lieux} />
-      <Eleves eleves={eleves} headline={home.eleves_headline} />
+      <Stats stats={sections.stats} />
+      <Video video={sections.video.video_embed} titre={sections.video.titre} />
+      <Presentation
+        titre={sections.presentation.titre}
+        body={sections.presentation.body}
+      />
+      <Quote texte={sections.citation.texte} auteur={sections.citation.auteur} />
+      <Gallery images={sections.galerie.images} titre={sections.galerie.titre} />
+      <Ateliers
+        ateliers={ateliers}
+        lieux={lieux}
+        titre={sections.ateliers.titre}
+      />
+      <Eleves eleves={eleves} headline={sections.anciens_eleves.titre} />
       <Events
         futureEvents={events.future}
         pastEvents={events.past}
         ateliers={ateliers}
+        titre={sections.spectacles.titre}
       />
-      <Professeurs professeurs={professeurs} />
-      <JennyBio imageBio={home.image_bio} bodyBio={home.body_bio} />
+      <Professeurs professeurs={professeurs} titre={sections.professeurs.titre} />
+      <JennyBio
+        titre={sections.jenny_lorant.titre}
+        sousTitre={sections.jenny_lorant.sous_titre}
+        imageBio={sections.jenny_lorant.image}
+        bodyBio={sections.jenny_lorant.body}
+      />
       <Contact />
-      <Footer />
+      <Footer footer={sections.pied_de_page} />
     </>
   );
 }

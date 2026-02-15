@@ -39,7 +39,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="nav-link text-[#FAF9F6] hover:text-[#CCA054] transition-colors text-sm font-medium tracking-wide uppercase"
+                  className="nav-link text-[#F5F5F0] hover:text-[#E11D48] transition-colors text-sm font-medium tracking-wide uppercase"
                 >
                   {link.label}
                 </Link>
@@ -49,7 +49,7 @@ export default function Navigation() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden absolute right-4 text-[#FAF9F6] hover:text-[#CCA054] p-2"
+              className="md:hidden absolute right-4 text-[#F5F5F0] hover:text-[#E11D48] p-2"
             >
               {!mobileOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,14 +66,14 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileOpen && (
-          <div className="md:hidden bg-[#0a0a0a]/98 backdrop-blur-sm border-t border-[#CCA054]/20">
+          <div className="md:hidden bg-[#0a0a0a]/98 backdrop-blur-sm border-t border-[#E11D48]/20">
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-[#FAF9F6] hover:text-[#CCA054] transition-colors text-lg font-medium py-2 border-b border-[#CCA054]/10"
+                  className="block text-[#F5F5F0] hover:text-[#E11D48] transition-colors text-lg font-medium py-2 border-b border-[#E11D48]/10"
                 >
                   {link.label}
                 </Link>

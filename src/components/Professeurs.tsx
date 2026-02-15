@@ -11,9 +11,10 @@ import "swiper/css/pagination";
 
 interface ProfesseursProps {
   professeurs: Professeur[];
+  titre?: string;
 }
 
-export default function Professeurs({ professeurs }: ProfesseursProps) {
+export default function Professeurs({ professeurs, titre }: ProfesseursProps) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   if (professeurs.length === 0) {
@@ -24,10 +25,10 @@ export default function Professeurs({ professeurs }: ProfesseursProps) {
     <section id="prof" className="py-20 bg-[#1a1a1a]">
       <div className="max-w-6xl mx-auto px-4">
         <h2
-          className="text-4xl md:text-5xl text-[#FAF9F6] text-center mb-12"
+          className="text-4xl md:text-5xl text-[#F5F5F0] text-center mb-12"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
-          Les professeurs
+          {titre || "Les professeurs"}
         </h2>
 
         <Swiper
@@ -44,8 +45,8 @@ export default function Professeurs({ professeurs }: ProfesseursProps) {
         >
           {professeurs.filter(p => p.image).map((prof) => (
             <SwiperSlide key={prof.slug}>
-              <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#CCA054]/20 card-broadway">
-                <div className="aspect-square overflow-hidden img-gold-filter">
+              <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#E11D48]/20 card-broadway">
+                <div className="aspect-square overflow-hidden img-red-filter">
                   <Image
                     src={prof.image}
                     alt={prof.title}
@@ -56,12 +57,12 @@ export default function Professeurs({ professeurs }: ProfesseursProps) {
                 </div>
                 <div className="p-6 text-center">
                   <h3
-                    className="text-xl text-[#FAF9F6] mb-1"
+                    className="text-xl text-[#F5F5F0] mb-1"
                     style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                   >
                     {prof.title}
                   </h3>
-                  <p className="text-[#CCA054] text-sm uppercase tracking-wide">
+                  <p className="text-[#E11D48] text-sm uppercase tracking-wide">
                     {prof.fonction}
                   </p>
 
@@ -70,14 +71,14 @@ export default function Professeurs({ professeurs }: ProfesseursProps) {
                       onClick={() =>
                         setExpanded(expanded === prof.slug ? null : prof.slug)
                       }
-                      className="text-[#CCA054] hover:text-[#E8C882] text-sm transition-colors"
+                      className="text-[#E11D48] hover:text-[#FB7185] text-sm transition-colors"
                     >
                       {expanded === prof.slug
                         ? "Masquer la biographie −"
                         : "Lire la biographie +"}
                     </button>
                     {expanded === prof.slug && (
-                      <div className="mt-4 text-left text-[#FAF9F6]/70 text-sm prose-broadway">
+                      <div className="mt-4 text-left text-[#F5F5F0]/70 text-sm prose-broadway">
                         <div dangerouslySetInnerHTML={{ __html: prof.body }} />
                       </div>
                     )}

@@ -13,12 +13,14 @@ interface EventsProps {
   futureEvents: Event[];
   pastEvents: Event[];
   ateliers: Atelier[];
+  titre?: string;
 }
 
 export default function Events({
   futureEvents,
   pastEvents,
   ateliers,
+  titre,
 }: EventsProps) {
   const [tab, setTab] = useState<"future" | "past">("future");
 
@@ -31,10 +33,10 @@ export default function Events({
     <section id="concerts" className="py-20 bg-[#1a1a1a]/50">
       <div className="max-w-6xl mx-auto px-4">
         <h2
-          className="text-4xl md:text-5xl text-[#FAF9F6] text-center mb-8"
+          className="text-4xl md:text-5xl text-[#F5F5F0] text-center mb-8"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
-          Dates des prochains spectacles
+          {titre || "Dates des prochains spectacles"}
         </h2>
 
         {/* Toggle buttons */}
@@ -43,8 +45,8 @@ export default function Events({
             onClick={() => setTab("future")}
             className={`px-6 py-2 font-medium transition-colors rounded-sm ${
               tab === "future"
-                ? "bg-[#CCA054] text-[#0a0a0a]"
-                : "border border-[#CCA054]/50 text-[#CCA054] hover:bg-[#CCA054]/10"
+                ? "bg-[#E11D48] text-[#F5F5F0]"
+                : "border border-[#E11D48]/50 text-[#E11D48] hover:bg-[#E11D48]/10"
             }`}
           >
             À venir
@@ -53,8 +55,8 @@ export default function Events({
             onClick={() => setTab("past")}
             className={`px-6 py-2 font-medium transition-colors rounded-sm ${
               tab === "past"
-                ? "bg-[#CCA054] text-[#0a0a0a]"
-                : "border border-[#CCA054]/50 text-[#CCA054] hover:bg-[#CCA054]/10"
+                ? "bg-[#E11D48] text-[#F5F5F0]"
+                : "border border-[#E11D48]/50 text-[#E11D48] hover:bg-[#E11D48]/10"
             }`}
           >
             Passés
@@ -65,7 +67,7 @@ export default function Events({
         {tab === "future" && (
           <>
             {futureEvents.length === 0 ? (
-              <p className="text-center text-[#FAF9F6]/70 py-8">
+              <p className="text-center text-[#F5F5F0]/70 py-8">
                 Aucun nouveau spectacle prévu pour l&apos;instant.
               </p>
             ) : (
@@ -83,7 +85,7 @@ export default function Events({
               >
                 {futureEvents.map((event) => (
                   <SwiperSlide key={event.slug}>
-                    <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#CCA054]/20 card-broadway">
+                    <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#E11D48]/20 card-broadway">
                       <div className="aspect-video overflow-hidden">
                         <Image
                           src={event.image}
@@ -95,12 +97,12 @@ export default function Events({
                       </div>
                       <div className="p-6 text-center">
                         <h3
-                          className="text-xl text-[#FAF9F6] mb-2"
+                          className="text-xl text-[#F5F5F0] mb-2"
                           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                         >
                           {event.title}
                         </h3>
-                        <p className="text-[#CCA054] text-sm uppercase tracking-wide mb-4">
+                        <p className="text-[#E11D48] text-sm uppercase tracking-wide mb-4">
                           {event.date_display}
                         </p>
 
@@ -111,12 +113,12 @@ export default function Events({
                         ))}
 
                         <div className="mt-6">
-                          <p className="text-[#FAF9F6]/70 text-sm mb-2">
+                          <p className="text-[#F5F5F0]/70 text-sm mb-2">
                             Réservations :
                           </p>
                           <a
                             href="mailto:billetterie@jenny-musique.ch"
-                            className="text-[#CCA054] hover:text-[#E8C882] transition-colors"
+                            className="text-[#E11D48] hover:text-[#FB7185] transition-colors"
                           >
                             billetterie@jenny-musique.ch
                           </a>
@@ -146,7 +148,7 @@ export default function Events({
           >
             {pastEvents.map((event) => (
               <SwiperSlide key={event.slug}>
-                <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#CCA054]/20 opacity-75">
+                <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#E11D48]/20 opacity-75">
                   <div className="aspect-video overflow-hidden">
                     <Image
                       src={event.image}
@@ -158,12 +160,12 @@ export default function Events({
                   </div>
                   <div className="p-6 text-center">
                     <h3
-                      className="text-xl text-[#FAF9F6] mb-2"
+                      className="text-xl text-[#F5F5F0] mb-2"
                       style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                     >
                       {event.title}
                     </h3>
-                    <p className="text-[#CCA054]/70 text-sm uppercase tracking-wide mb-4">
+                    <p className="text-[#E11D48]/70 text-sm uppercase tracking-wide mb-4">
                       {event.date_display}
                     </p>
                     {event.ateliers?.map((slug) => (

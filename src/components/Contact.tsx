@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto px-4">
         <h2
-          className="text-4xl md:text-5xl text-[#FAF9F6] text-center mb-16"
+          className="text-4xl md:text-5xl text-[#F5F5F0] text-center mb-16"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
           Contact
@@ -13,7 +13,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <h3
-              className="text-2xl text-[#CCA054] mb-6"
+              className="text-2xl text-[#E11D48] mb-6"
               style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
               Formulaire de contact
@@ -22,7 +22,7 @@ export default function Contact() {
               href="https://sprw.io/stt-125f02"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-broadway inline-flex items-center px-8 py-4 bg-[#CCA054] text-[#0a0a0a] font-semibold rounded-sm hover:bg-[#E8C882] transition-colors"
+              className="btn-broadway inline-flex items-center px-8 py-4 bg-[#E11D48] text-[#F5F5F0] font-semibold rounded-sm hover:bg-[#FB7185] transition-colors"
             >
               Accéder au formulaire
               <svg
@@ -45,13 +45,13 @@ export default function Contact() {
           <div className="space-y-8">
             <div>
               <h3
-                className="text-xl text-[#CCA054] mb-4"
+                className="text-xl text-[#E11D48] mb-4"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 Coordonnées
               </h3>
-              <address className="not-italic text-[#FAF9F6]/80 leading-relaxed">
-                <strong className="text-[#FAF9F6]">ACMJL</strong>
+              <address className="not-italic text-[#F5F5F0]/80 leading-relaxed">
+                <strong className="text-[#F5F5F0]">ACMJL</strong>
                 <br />
                 Jenny Lorant
                 <br />
@@ -63,29 +63,29 @@ export default function Contact() {
 
             <div>
               <h3
-                className="text-xl text-[#CCA054] mb-4"
+                className="text-xl text-[#E11D48] mb-4"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 Partenaires
               </h3>
-              <div className="text-[#FAF9F6]/80 space-y-3 text-sm">
+              <div className="text-[#F5F5F0]/80 space-y-3 text-sm">
                 <p>
-                  <strong className="text-[#FAF9F6]">Direction technique</strong>
+                  <strong className="text-[#F5F5F0]">Direction technique</strong>
                   <br />
                   Fabien Ayer
                 </p>
                 <p>
-                  <strong className="text-[#FAF9F6]">Lumières</strong>
+                  <strong className="text-[#F5F5F0]">Lumières</strong>
                   <br />
                   Armand Pochon
                 </p>
                 <p>
-                  <strong className="text-[#FAF9F6]">Décors</strong>
+                  <strong className="text-[#F5F5F0]">Décors</strong>
                   <br />
                   Claude Salsac et Christine Stein
                 </p>
                 <p>
-                  <strong className="text-[#FAF9F6]">Lieu</strong>
+                  <strong className="text-[#F5F5F0]">Lieu</strong>
                   <br />
                   Salle des Remparts
                   <br />

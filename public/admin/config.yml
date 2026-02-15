@@ -3,51 +3,237 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
-media_folder: public/images
-public_folder: /images
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dfv2us40f
+    api_key: 765975952492195
 
 collections:
-  - name: pages
-    label: Pages
+  - name: sections
+    label: Sections du site
+    label_singular: Section
+    description: Gérez le contenu de chaque section du site dans l'ordre d'affichage
     files:
-      - name: home
-        label: Accueil
-        file: content/pages/home.md
+      - name: accueil
+        label: "1. Accueil"
+        file: content/sections/01-accueil.md
         fields:
-          - name: title
+          - name: section
+            widget: hidden
+            default: accueil
+          - name: titre
+            label: Titre du site
+            widget: string
+          - name: accroche
+            label: Accroche principale
+            widget: string
+          - name: image_hero
+            label: Image de fond
+            widget: image
+
+      - name: stats
+        label: "2. Stats"
+        file: content/sections/02-stats.md
+        fields:
+          - name: section
+            widget: hidden
+            default: stats
+          - name: eleves
+            label: "Stat 1 - Titre"
+            widget: string
+          - name: eleves_desc
+            label: "Stat 1 - Description"
+            widget: string
+          - name: region
+            label: "Stat 2 - Titre"
+            widget: string
+          - name: region_desc
+            label: "Stat 2 - Description"
+            widget: string
+          - name: experience
+            label: "Stat 3 - Titre"
+            widget: string
+          - name: experience_desc
+            label: "Stat 3 - Description"
+            widget: string
+          - name: unique
+            label: "Stat 4 - Titre"
+            widget: string
+
+      - name: video
+        label: "3. ACMJL en vidéo"
+        file: content/sections/03-video.md
+        fields:
+          - name: section
+            widget: hidden
+            default: video
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: video_embed
+            label: Code embed vidéo (Instagram/YouTube)
+            widget: text
+
+      - name: presentation
+        label: "4. Présentation"
+        file: content/sections/04-presentation.md
+        fields:
+          - name: section
+            widget: hidden
+            default: presentation
+          - name: titre
             label: Titre
             widget: string
-          - name: headline
-            label: Accroche
-            widget: string
-          - name: hero_image
-            label: Image Hero
-            widget: image
-          - name: video
-            label: Video embed
-            widget: text
-            required: false
-          - name: quote
+          - name: body
+            label: Texte de présentation
+            widget: markdown
+
+      - name: citation
+        label: "5. Citation"
+        file: content/sections/05-citation.md
+        fields:
+          - name: section
+            widget: hidden
+            default: citation
+          - name: texte
             label: Citation
             widget: string
-          - name: body
-            label: Texte presentation
-            widget: markdown
-          - name: body_bio
-            label: Bio Jenny Lorant
-            widget: markdown
-          - name: image_bio
-            label: Photo Jenny
-            widget: image
-          - name: gallery
-            label: Galerie photos
+          - name: auteur
+            label: Auteur (optionnel)
+            widget: string
+            required: false
+
+      - name: galerie
+        label: "6. Galerie"
+        file: content/sections/06-galerie.md
+        fields:
+          - name: section
+            widget: hidden
+            default: galerie
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: images
+            label: Photos
             widget: list
             field:
               name: image
               label: Image
               widget: image
-          - name: eleves_headline
-            label: Titre section eleves
+
+      - name: ateliers_section
+        label: "7. Ateliers"
+        file: content/sections/07-ateliers.md
+        fields:
+          - name: section
+            widget: hidden
+            default: ateliers
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: sous_titre
+            label: Sous-titre
+            widget: string
+            required: false
+
+      - name: anciens_eleves
+        label: "8. Anciens élèves"
+        file: content/sections/08-anciens-eleves.md
+        fields:
+          - name: section
+            widget: hidden
+            default: anciens_eleves
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: sous_titre
+            label: Sous-titre
+            widget: string
+            required: false
+
+      - name: spectacles_section
+        label: "9. Spectacles"
+        file: content/sections/09-spectacles.md
+        fields:
+          - name: section
+            widget: hidden
+            default: spectacles
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: sous_titre
+            label: Sous-titre
+            widget: string
+            required: false
+
+      - name: professeurs_section
+        label: "10. Professeurs"
+        file: content/sections/10-professeurs.md
+        fields:
+          - name: section
+            widget: hidden
+            default: professeurs
+          - name: titre
+            label: Titre de la section
+            widget: string
+          - name: sous_titre
+            label: Sous-titre
+            widget: string
+            required: false
+
+      - name: jenny_lorant
+        label: "11. Jenny Lorant"
+        file: content/sections/11-jenny-lorant.md
+        fields:
+          - name: section
+            widget: hidden
+            default: jenny_lorant
+          - name: titre
+            label: Titre
+            widget: string
+          - name: sous_titre
+            label: Sous-titre / Fonction
+            widget: string
+          - name: image
+            label: Photo
+            widget: image
+          - name: body
+            label: Biographie
+            widget: markdown
+
+      - name: pied_de_page
+        label: "12. Pied de page"
+        file: content/sections/12-pied-de-page.md
+        fields:
+          - name: section
+            widget: hidden
+            default: pied_de_page
+          - name: email
+            label: Email de contact
+            widget: string
+          - name: telephone
+            label: Téléphone
+            widget: string
+            required: false
+          - name: adresse
+            label: Adresse
+            widget: text
+            required: false
+          - name: facebook
+            label: Lien Facebook
+            widget: string
+            required: false
+          - name: instagram
+            label: Lien Instagram
+            widget: string
+            required: false
+          - name: youtube
+            label: Lien YouTube
+            widget: string
+            required: false
+          - name: copyright
+            label: Texte copyright
             widget: string
 
   - name: ateliers
@@ -70,7 +256,7 @@ collections:
         label: Horaires
         widget: string
       - name: periode
-        label: Periode
+        label: Période
         widget: string
       - name: lieu
         label: Lieu
@@ -110,7 +296,7 @@ collections:
             value: open
           - label: Complet
             value: complet
-          - label: Ferme
+          - label: Fermé
             value: closed
       - name: body
         label: Description
@@ -138,7 +324,7 @@ collections:
         widget: markdown
 
   - name: eleves
-    label: Anciens eleves
+    label: Anciens élèves
     folder: content/eleves
     create: true
     slug: "{{slug}}"
@@ -150,7 +336,7 @@ collections:
         label: Photo
         widget: image
       - name: credit
-        label: Credit photo
+        label: Crédit photo
         widget: string
         required: false
       - name: body
@@ -181,16 +367,16 @@ collections:
         widget: image
         required: false
       - name: reservations
-        label: Email reservations
+        label: Email réservations
         widget: string
         required: false
       - name: status
         label: Status
         widget: select
         options:
-          - label: A venir
+          - label: À venir
             value: a_venir
-          - label: Passe
+          - label: Passé
             value: passe
       - name: body
         label: Description

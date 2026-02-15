@@ -9,21 +9,22 @@ import "swiper/css/pagination";
 
 interface GalleryProps {
   images: string[];
+  titre?: string;
 }
 
-export default function Gallery({ images }: GalleryProps) {
+export default function Gallery({ images, titre }: GalleryProps) {
   if (!images || images.length === 0) return null;
 
   return (
     <section id="galerie" className="py-20 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto px-4">
         <h2
-          className="text-4xl md:text-5xl text-[#FAF9F6] text-center mb-4"
+          className="text-4xl md:text-5xl text-[#F5F5F0] text-center mb-4"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
-          Nos ateliers en images
+          {titre || "Nos ateliers en images"}
         </h2>
-        <p className="text-center text-[#CCA054] uppercase tracking-widest text-sm mb-12">
+        <p className="text-center text-[#E11D48] uppercase tracking-widest text-sm mb-12">
           Découvrez les images des derniers spectacles de nos élèves
         </p>
 
