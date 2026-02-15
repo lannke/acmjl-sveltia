@@ -86,15 +86,17 @@ export default function Events({
                 {futureEvents.map((event) => (
                   <SwiperSlide key={event.slug}>
                     <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#E11D48]/20 card-broadway">
-                      <div className="aspect-video overflow-hidden">
-                        <Image
-                          src={event.image}
-                          alt={event.title}
-                          width={400}
-                          height={225}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      {event.image && (
+                        <div className="aspect-video overflow-hidden">
+                          <Image
+                            src={event.image as string}
+                            alt={event.title}
+                            width={400}
+                            height={225}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
                       <div className="p-6 text-center">
                         <h3
                           className="text-xl text-[#F5F5F0] mb-2"
@@ -149,15 +151,17 @@ export default function Events({
             {pastEvents.map((event) => (
               <SwiperSlide key={event.slug}>
                 <div className="bg-[#0a0a0a] rounded-lg overflow-hidden border border-[#E11D48]/20 opacity-75">
-                  <div className="aspect-video overflow-hidden">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      width={400}
-                      height={225}
-                      className="w-full h-full object-cover grayscale"
-                    />
-                  </div>
+                  {event.image && (
+                    <div className="aspect-video overflow-hidden">
+                      <Image
+                        src={event.image as string}
+                        alt={event.title}
+                        width={400}
+                        height={225}
+                        className="w-full h-full object-cover grayscale"
+                      />
+                    </div>
+                  )}
                   <div className="p-6 text-center">
                     <h3
                       className="text-xl text-[#F5F5F0] mb-2"
