@@ -3,7 +3,7 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
-# Media: utilise widget custom cloudinary (voir cloudinary-widget.js)
+# Images stockées dans Git (simple: Upload → choisir fichier → terminé)
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
@@ -11,7 +11,7 @@ collections:
   - name: sections
     label: Sections du site
     label_singular: Section
-    description: Gérez le contenu de chaque section du site dans l'ordre d'affichage
+    description: Gérez le contenu de chaque section du site
     files:
       - name: accueil
         label: "1. Accueil"
@@ -113,13 +113,12 @@ collections:
             label: Titre de la section
             widget: string
           - name: images
-            label: Photos (URLs Cloudinary)
+            label: Photos
             widget: list
-            hint: "Uploadez sur /upload puis collez les URLs"
             field:
               name: image
-              label: URL Image
-              widget: string
+              label: Image
+              widget: image
 
       - name: ateliers_section
         label: "7. Ateliers"
@@ -196,8 +195,7 @@ collections:
             widget: string
           - name: image
             label: Photo
-            widget: string
-            hint: "Collez l'URL Cloudinary (uploadez sur /upload ou cloudinary.com)"
+            widget: image
           - name: body
             label: Biographie
             widget: markdown
@@ -316,10 +314,9 @@ collections:
         label: Fonction
         widget: string
       - name: image
-        label: Photo (URL Cloudinary)
-        widget: string
+        label: Photo
+        widget: image
         required: false
-        hint: "Uploadez sur /upload puis collez l'URL"
       - name: body
         label: Biographie
         widget: markdown
@@ -334,9 +331,8 @@ collections:
         label: Nom
         widget: string
       - name: image
-        label: Photo (URL Cloudinary)
-        widget: string
-        hint: "Uploadez sur /upload puis collez l'URL"
+        label: Photo
+        widget: image
       - name: credit
         label: Crédit photo
         widget: string
@@ -365,10 +361,9 @@ collections:
           label: Date
           widget: string
       - name: image
-        label: Affiche (URL Cloudinary)
-        widget: string
+        label: Affiche
+        widget: image
         required: false
-        hint: "Uploadez sur /upload puis collez l'URL"
       - name: reservations
         label: Email réservations
         widget: string

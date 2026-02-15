@@ -1,6 +1,6 @@
 ---
 title: Izia Jeen
-image: /images/1304/img_0589.400x400.jpg
+image: https://res.cloudinary.com/dfv2us40f/image/upload/v1771164358/acmjl/1304/img_0589.jpg
 credit: ""
 ---
 

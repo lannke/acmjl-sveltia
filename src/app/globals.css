@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --broadway-black: #0a0a0a;
-  --broadway-gold: #CCA054;
-  --broadway-gold-light: #E8C882;
-  --broadway-cream: #FAF9F6;
-  --broadway-dark: #1a1a1a;
+  --broadway-black: #050505;
+  --broadway-red: #E11D48;
+  --broadway-red-light: #FB7185;
+  --broadway-red-dark: #BE123C;
+  --broadway-cream: #F5F5F0;
+  --broadway-dark: #0D0D0D;
 }
 
 @theme inline {
   --color-broadway-black: var(--broadway-black);
-  --color-broadway-gold: var(--broadway-gold);
-  --color-broadway-gold-light: var(--broadway-gold-light);
+  --color-broadway-red: var(--broadway-red);
+  --color-broadway-red-light: var(--broadway-red-light);
+  --color-broadway-red-dark: var(--broadway-red-dark);
   --color-broadway-cream: var(--broadway-cream);
   --color-broadway-dark: var(--broadway-dark);
   --font-display: 'Bebas Neue', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
 }
 
 html {
@@ -26,7 +28,7 @@ html {
 body {
   background: var(--broadway-black);
   color: var(--broadway-cream);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
@@ -38,13 +40,13 @@ body {
   background: var(--broadway-black);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--broadway-gold);
+  background: var(--broadway-red);
   border-radius: 4px;
 }
 
-/* Gold gradient text */
-.text-gradient-gold {
-  background: linear-gradient(135deg, #CCA054, #E8C882, #CCA054);
+/* Red gradient text */
+.text-gradient-red {
+  background: linear-gradient(135deg, #E11D48, #FB7185, #E11D48);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -76,16 +78,16 @@ body {
 }
 .card-broadway:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(204, 160, 84, 0.2);
+  box-shadow: 0 10px 40px rgba(225, 29, 72, 0.2);
 }
 
-/* Golden/Sepia filter for portraits */
-.img-gold-filter img {
-  filter: grayscale(100%) sepia(30%) brightness(90%) contrast(110%);
+/* Red/Tinted filter for portraits */
+.img-red-filter img {
+  filter: grayscale(100%) brightness(90%) contrast(110%);
   transition: filter 0.4s ease;
 }
-.img-gold-filter:hover img {
-  filter: grayscale(0%) sepia(0%) brightness(100%) contrast(100%);
+.img-red-filter:hover img {
+  filter: grayscale(0%) brightness(100%) contrast(100%);
 }
 
 /* Hero overlay */
@@ -100,7 +102,7 @@ body {
 /* Section divider */
 .divider-broadway {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #CCA054, transparent);
+  background: linear-gradient(90deg, transparent, #E11D48, transparent);
 }
 
 /* Navigation link underline effect */
@@ -114,7 +116,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--broadway-gold);
+  background: var(--broadway-red);
   transition: width 0.3s ease;
 }
 .nav-link:hover::after {
@@ -133,7 +135,7 @@ body {
   transform: translateX(-50%);
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at center, rgba(204, 160, 84, 0.1) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -154,8 +156,8 @@ body {
 
 /* Badge */
 .badge-broadway {
-  background: linear-gradient(135deg, #CCA054, #8B6914);
-  color: #0a0a0a;
+  background: linear-gradient(135deg, #E11D48, #BE123C);
+  color: #F5F5F0;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
@@ -172,23 +174,23 @@ body {
   backdrop-filter: blur(5px);
 }
 
-/* Golden overlay for img-gold-filter */
-.img-gold-filter {
+/* Red overlay for img-red-filter */
+.img-red-filter {
   position: relative;
 }
-.img-gold-filter::after {
+.img-red-filter::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(204, 160, 84, 0.15);
+  background: rgba(225, 29, 72, 0.1);
   pointer-events: none;
   z-index: 1;
   transition: opacity 0.4s ease;
 }
-.img-gold-filter:hover::after {
+.img-red-filter:hover::after {
   opacity: 0;
 }
 
@@ -197,7 +199,7 @@ body {
 .swiper .swiper-button-prev,
 .swiper-button-next,
 .swiper-button-prev {
-  color: #CCA054 !important;
+  color: #E11D48 !important;
   background: none !important;
   background-color: transparent !important;
   width: auto !important;
@@ -212,7 +214,7 @@ body {
 .swiper .swiper-button-prev:hover,
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #E8C882 !important;
+  color: #FB7185 !important;
   background: none !important;
 }
 .swiper .swiper-button-next::after,
@@ -233,11 +235,11 @@ body {
   position: absolute !important;
 }
 .swiper-pagination-bullet {
-  background: #CCA054 !important;
+  background: #E11D48 !important;
   opacity: 0.5 !important;
 }
 .swiper-pagination-bullet-active {
-  background: #E8C882 !important;
+  background: #FB7185 !important;
   opacity: 1 !important;
 }
 @media (max-width: 640px) {
@@ -249,16 +251,16 @@ body {
 
 /* Prose styling for markdown content */
 .prose-broadway {
-  color: rgba(250, 249, 246, 0.8);
+  color: rgba(245, 245, 240, 0.8);
 }
 .prose-broadway strong {
-  color: #FAF9F6;
+  color: #F5F5F0;
 }
 .prose-broadway a {
-  color: #CCA054;
+  color: #E11D48;
 }
 .prose-broadway a:hover {
-  color: #E8C882;
+  color: #FB7185;
 }
 
 /* Global link styling */
@@ -267,18 +269,18 @@ a {
   text-decoration: none;
 }
 a:not([class]) {
-  color: #CCA054;
+  color: #E11D48;
 }
 a:not([class]):hover {
-  color: #E8C882;
+  color: #FB7185;
 }
 
 /* Override any Tailwind blue defaults */
 ::selection {
-  background: #CCA054;
-  color: #0a0a0a;
+  background: #E11D48;
+  color: #F5F5F0;
 }
 ::-moz-selection {
-  background: #CCA054;
-  color: #0a0a0a;
+  background: #E11D48;
+  color: #F5F5F0;
 }
