@@ -3,15 +3,9 @@ backend:
   repo: lannke/acmjl-sveltia
   branch: main
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dfv2us40f
-    api_key: 765975952492195
-    default_transformations:
-      - - fetch_format: auto
-          quality: auto
-    multiple: false
+# Media: utilise widget custom cloudinary (voir cloudinary-widget.js)
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: sections
@@ -34,7 +28,7 @@ collections:
             widget: string
           - name: image_hero
             label: Image de fond
-            widget: image
+            widget: cloudinary
 
       - name: stats
         label: "2. Stats"
@@ -124,7 +118,7 @@ collections:
             field:
               name: image
               label: Image
-              widget: image
+              widget: cloudinary
 
       - name: ateliers_section
         label: "7. Ateliers"
@@ -201,7 +195,7 @@ collections:
             widget: string
           - name: image
             label: Photo
-            widget: image
+            widget: cloudinary
           - name: body
             label: Biographie
             widget: markdown
@@ -321,7 +315,7 @@ collections:
         widget: string
       - name: image
         label: Photo
-        widget: image
+        widget: cloudinary
         required: false
       - name: body
         label: Biographie
@@ -338,7 +332,7 @@ collections:
         widget: string
       - name: image
         label: Photo
-        widget: image
+        widget: cloudinary
       - name: credit
         label: Crédit photo
         widget: string
@@ -368,7 +362,7 @@ collections:
           widget: string
       - name: image
         label: Affiche
-        widget: image
+        widget: cloudinary
         required: false
       - name: reservations
         label: Email réservations
