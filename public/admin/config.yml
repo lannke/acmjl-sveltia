@@ -28,8 +28,7 @@ collections:
             widget: string
           - name: image_hero
             label: Image de fond
-            widget: string
-            hint: "Collez l'URL Cloudinary (uploadez sur /upload ou cloudinary.com)"
+            widget: image
 
       - name: stats
         label: "2. Stats"
