@@ -3,8 +3,7 @@
 import { useState, useCallback } from "react";
 
 const CLOUD_NAME = "dfv2us40f";
-// TODO: Replace with your unsigned upload preset from Cloudinary
-const UPLOAD_PRESET = "acmjl_unsigned";
+const UPLOAD_PRESET = "acmjl-preset";
 
 export default function UploadPage() {
   const [uploading, setUploading] = useState(false);
