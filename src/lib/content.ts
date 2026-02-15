@@ -5,6 +5,12 @@ import matter from 'gray-matter';
 const contentDirectory = path.join(process.cwd(), 'content');
 const sectionsDirectory = path.join(contentDirectory, 'sections');
 
+// Normalize image path: convert public/uploads/ to /uploads/ for frontend
+function normalizeImagePath(imagePath: string): string {
+  if (!imagePath) return '';
+  return imagePath.replace(/^public\/uploads\//, '/uploads/');
+}
+
 // Convert plain text with line breaks to HTML paragraphs
 function textToHtml(text: string): string {
   if (!text) return '';
@@ -152,7 +158,7 @@ export async function getSections(): Promise<AllSections> {
     accueil: {
       titre: accueil.data.titre as string || 'ACMJL',
       accroche: accueil.data.accroche as string || '',
-      image_hero: accueil.data.image_hero as string || '/images/hero.jpg',
+      image_hero: normalizeImagePath(accueil.data.image_hero as string) || '/images/hero.jpg',
     },
     stats: {
       eleves: stats.data.eleves as string || '',
@@ -177,7 +183,7 @@ export async function getSections(): Promise<AllSections> {
     },
     galerie: {
       titre: galerie.data.titre as string || 'Galerie photos',
-      images: galerie.data.images as string[] || [],
+      images: ((galerie.data.images as string[]) || []).map(normalizeImagePath),
     },
     ateliers: {
       titre: ateliersSection.data.titre as string || 'Nos ateliers',
@@ -198,7 +204,7 @@ export async function getSections(): Promise<AllSections> {
     jenny_lorant: {
       titre: jennyLorant.data.titre as string || 'Jenny Lorant',
       sous_titre: jennyLorant.data.sous_titre as string || "Fondatrice de l'ACMJL",
-      image: jennyLorant.data.image as string || '/images/jenny.jpg',
+      image: normalizeImagePath(jennyLorant.data.image as string) || '/images/jenny.jpg',
       body: textToHtml(jennyLorant.content || ''),
     },
     pied_de_page: {
@@ -335,7 +341,7 @@ export async function getProfesseurs(): Promise<Professeur[]> {
         slug: filename.replace(/\.md$/, ''),
         title: data.title || '',
         fonction: data.fonction || '',
-        image: data.image || '',
+        image: normalizeImagePath(data.image) || '',
         body: content,
       };
     });
@@ -401,7 +407,7 @@ export async function getEvents(): Promise<{ future: Event[]; past: Event[] }> {
         groupe: data.groupe || '',
         dates: data.dates || [],
         date_display: formatDates(data.dates || []),
-        image: data.image,
+        image: normalizeImagePath(data.image),
         tarifs: data.tarifs,
         reservations: data.reservations,
         status: data.status || 'passe',
@@ -435,7 +441,7 @@ export async function getEleves(): Promise<Eleve[]> {
       return {
         slug: filename.replace(/\.md$/, ''),
         title: data.title || '',
-        image: data.image || '',
+        image: normalizeImagePath(data.image) || '',
         credit: data.credit,
         website: data.website,
         body: content,
