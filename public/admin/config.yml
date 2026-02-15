@@ -8,6 +8,10 @@ media_library:
   config:
     cloud_name: dfv2us40f
     api_key: 765975952492195
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+    multiple: false
 
 collections:
   - name: sections
